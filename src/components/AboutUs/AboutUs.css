@@ -1,0 +1,106 @@
+.about-section {
+    background-color: #fcfbf9;
+    /* Very light subtle background */
+    position: relative;
+    overflow: hidden;
+}
+
+.about-decoration {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(var(--bs-warning-rgb), 0.03) 0%, rgba(255, 255, 255, 0) 70%);
+    top: -200px;
+    right: -200px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.video-frame {
+    position: relative;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    transition: transform 0.5s ease;
+}
+
+.video-frame::before {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    border: 1px solid rgba(var(--bs-warning-rgb), 0.3);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.video-frame:hover {
+    transform: translateY(-5px);
+}
+
+.about-subtitle {
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--bs-warning);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.about-title {
+    font-family: 'Playfair Display', serif;
+    /* Assuming a serif font is available or fallback */
+    font-weight: 700;
+    color: #2c3e50;
+    position: relative;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.about-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background-color: var(--bs-warning);
+}
+
+.about-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #5a6a7e;
+    font-weight: 300;
+}
+
+.signature-text {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #8B0000;
+    /* Maroon */
+    font-size: 1.1rem;
+    border-left: 3px solid rgba(var(--bs-warning-rgb), 0.5);
+    padding-left: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.btn-premium {
+    background: transparent;
+    color: #2c3e50;
+    border: 1px solid #2c3e50;
+    padding: 12px 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.btn-premium:hover {
+    background: #2c3e50;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}

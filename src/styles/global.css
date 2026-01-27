@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import './variables.css';
+@import './animations.css';
+
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-gray);
+    background-color: #ffffff;
+    /* Uniform Background */
+    overflow-x: hidden;
+}
+
+/* Force sections to inherit white bg (unless specific override like 'mission') */
+section:not(#mission) {
+    background-color: #ffffff !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    color: var(--color-maroon);
+    font-weight: 700;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-gold);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-maroon);
+}
+
+/* Utilities */
+.text-maroon {
+    color: var(--color-maroon) !important;
+}
+
+.text-gold {
+    color: var(--color-gold) !important;
+}
+
+.text-black {
+    color: var(--color-rich-black) !important;
+}
+
+.bg-maroon {
+    background-color: var(--color-maroon) !important;
+}
+
+.bg-gold {
+    background-color: var(--color-gold) !important;
+}
+
+.btn-brand {
+    background-color: var(--color-maroon);
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: var(--transition-fast);
+    text-transform: uppercase;
+}
+
+.btn-brand:hover {
+    background-color: #600000;
+    color: var(--color-gold);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-gold);
+}

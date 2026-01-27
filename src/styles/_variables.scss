@@ -1,0 +1,27 @@
+// Brand Colors - Richer & Deeper
+$primary-maroon: #800000; // Deep crimson
+$secondary-gold: #B8860B; // Dark Goldenrod - readable on white
+$rich-black: #1a1a1a;     // Soft black for text
+$off-white: #ffffff;      // Pure white for cleaner look
+$light-gray: #f8f9fa;     // Subtle background/section color
+
+// Bootstrap Overrides
+$primary: $primary-maroon;
+$secondary: $secondary-gold;
+$body-bg: $off-white;
+$body-color: $rich-black;
+$font-family-sans-serif: 'Lato', sans-serif;
+$font-family-serif: 'Playfair Display', serif;
+
+// Custom CSS Variables
+:root {
+  --brand-maroon: #{$primary-maroon};
+  --brand-gold: #{$secondary-gold};
+  --brand-black: #{$rich-black};
+  --brand-light: #{$light-gray};
+  --gold-gradient: linear-gradient(135deg, #B8860B 0%, #E5C100 50%, #B8860B 100%);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(184, 134, 11, 0.2);
+  --shadow-sm: 0 4px 15px rgba(0,0,0,0.05);
+  --shadow-lg: 0 10px 40px rgba(0,0,0,0.1);
+}

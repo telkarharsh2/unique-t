@@ -1,0 +1,106 @@
+/* Animations */
+
+/* 3D Perspective Container */
+.perspective-container {
+    perspective: 1000px;
+}
+
+/* 3D Scroll Animations */
+@keyframes flipUp3D {
+    from {
+        opacity: 0;
+        transform: perspective(1000px) rotateX(45deg) translate3d(0, 60px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: perspective(1000px) rotateX(0) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes zoomRotate3D {
+    from {
+        opacity: 0;
+        transform: perspective(1000px) translate3d(0, 60px, -100px) rotate3d(1, 1, 0, 15deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: perspective(1000px) translate3d(0, 0, 0) rotate3d(0, 0, 0, 0);
+    }
+}
+
+.scroll-3d-flip {
+    opacity: 0;
+    /* Initial state hidden */
+    animation: flipUp3D 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.scroll-3d-zoom {
+    opacity: 0;
+    /* Initial state hidden */
+    animation: zoomRotate3D 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Existing Animations with tweaks */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.animate-fade-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.animate-slide-right {
+    animation: slideInRight 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}

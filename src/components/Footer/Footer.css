@@ -1,0 +1,102 @@
+.footer-section {
+    background: #f8f9fa;
+    position: relative;
+    overflow: hidden;
+    color: #333;
+}
+
+.footer-gradient-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--bs-warning), transparent);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+}
+
+.footer-brand-title {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    color: #000;
+    margin-bottom: 1.5rem;
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #666;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.footer-contact-item:hover {
+    color: #000;
+    transform: translateX(5px);
+}
+
+.footer-icon-box {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bs-warning);
+    transition: all 0.3s ease;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.footer-contact-item:hover .footer-icon-box {
+    background: var(--bs-warning);
+    color: #000;
+    box-shadow: 0 0 15px rgba(255, 193, 7, 0.4);
+    border-color: var(--bs-warning);
+}
+
+.footer-link {
+    color: #666;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    padding: 0.25rem 0;
+    position: relative;
+}
+
+.footer-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--bs-warning);
+    transition: width 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--bs-warning);
+    padding-left: 5px;
+}
+
+.footer-link:hover::after {
+    width: 100%;
+}
+
+.footer-logo-container {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 16px;
+    display: inline-block;
+}
+
+.footer-bottom {
+    border-top: 1px solid #ddd;
+    padding-top: 2rem;
+    margin-top: 3rem;
+}

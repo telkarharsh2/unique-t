@@ -1,0 +1,171 @@
+/* Navigation Bar */
+.nav-icon-hover {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-icon-hover:hover {
+    background: rgba(212, 175, 55, 0.15);
+    /* Gold tint */
+    transform: scale(1.15);
+}
+
+/* Vertical Dock Styles (Collapsed) */
+/* Glass Sidebar Container - 100px Width */
+/* Glass Sidebar Container - 100px Width */
+.glass-navbar {
+    background: rgba(255, 255, 255, 0.85) !important;
+    /* White Background */
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.8) !important;
+    border-radius: 0 !important;
+    box-shadow: 5px 0 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+    gap: 20px;
+
+    width: 100px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Vertical Dock Styles */
+.nav-icon-link {
+    color: var(--color-maroon);
+    /* Maroon icons */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px !important;
+    position: relative;
+    text-decoration: none;
+    margin: 0 auto;
+}
+
+/* Hover Effects */
+.nav-icon-link:hover {
+    background: rgba(139, 0, 0, 0.05);
+    /* Subtle Maroon tint */
+    color: var(--color-gold);
+    /* Golden Yellow on Hover */
+    box-shadow: 0 0 15px rgba(255, 184, 0, 0.2);
+    /* Gold Glow */
+    transform: scale(1.1);
+}
+
+.nav-icon-link:active {
+    transform: scale(0.95);
+}
+
+.icon-box-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+/* Text Label Sliding Effect */
+.text-label {
+    position: absolute;
+    left: 80%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-20px);
+    background: white;
+    /* White tooltips */
+    color: var(--color-maroon);
+    /* Maroon text */
+    padding: 8px 16px;
+    border-radius: 30px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    font-weight: 700;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    pointer-events: none;
+    z-index: 100;
+    margin-left: 25px;
+}
+
+/* Tooltip Arrow */
+.text-label::before {
+    content: '';
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+    /* White arrow */
+    margin-right: -1px;
+}
+
+.nav-icon-link:hover .text-label {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(0);
+    left: 100%;
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+    .nav-icon-link {
+        width: auto;
+        height: 45px;
+        padding: 0 15px;
+        background: transparent;
+        border-radius: 50px !important;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .nav-icon-link:hover {
+        transform: translateY(-2px);
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .text-label {
+        display: none;
+    }
+
+    .glass-navbar {
+        flex-direction: row;
+        width: 100% !important;
+        height: auto;
+        position: relative;
+        /* Reset fixed */
+        border-right: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 20px 20px 0 0 !important;
+        padding: 10px 20px;
+        bottom: 0;
+        top: auto;
+        left: 0;
+        gap: 0;
+        box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+        background: rgba(255, 255, 255, 0.8) !important;
+        /* Less transparent on mobile for readabilty */
+    }
+}

@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&display=swap');
+
+// 1. Import Bootstrap Functions
+@import "bootstrap/scss/functions";
+// 2. Import Custom Variables
+@import "variables";
+// 3. Import Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+/* --- GLOBAL LUXURY TWEAKS --- */
+body {
+  background-color: $off-white;
+  color: $rich-black;
+  letter-spacing: 0.3px;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  color: $primary-maroon;
+  letter-spacing: -0.5px;
+}
+
+/* Metallic Text Effect - Adjusted for Light Mode */
+.text-gradient-gold {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  // Removed text-shadow for cleaner look on white
+}
+
+/* --- BUTTONS: SHARP & ELEGANT --- */
+.btn-brand {
+  background: transparent;
+  color: $primary-maroon;
+  border: 1px solid $primary-maroon;
+  border-radius: 2px; // Slightly softened corners
+  padding: 15px 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: $primary-maroon;
+    transition: all 0.4s ease;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: white;
+    border-color: $primary-maroon;
+    box-shadow: var(--shadow-sm);
+
+    &::before {
+      left: 0;
+    }
+  }
+}
+
+/* --- GLASSMORPHISM NAVBAR --- */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+
+  &.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    box-shadow: var(--shadow-sm);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* --- CARDS: LIGHT LUXURY --- */
+.luxury-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+    border-color: transparent;
+    box-shadow: var(--shadow-lg);
+
+    .icon-box {
+      background: $primary-maroon;
+      color: white;
+      border-color: $primary-maroon;
+    }
+  }
+}
+
+.icon-box {
+  width: 70px;
+  height: 70px;
+  border: 1px solid $secondary-gold;
+  color: $secondary-gold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  transition: all 0.4s ease;
+}
+
+/* --- SECTION TITLES --- */
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 60px;
+
+  h2 {
+    font-size: 3rem;
+    color: $primary-maroon;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--brand-gold);
+    margin: 20px auto 0;
+    opacity: 0.7;
+  }
+}
+
+/* --- UTILITIES --- */
+.tracking-wide {
+  letter-spacing: 3px;
+}
+
+.text-gold {
+  color: $secondary-gold !important;
+}
+
+.bg-maroon {
+  background-color: $primary-maroon;
+}
+
+.bg-light-gray {
+  background-color: $light-gray;
+}
+
+.text-maroon {
+  color: $primary-maroon !important;
+}
+
+// Utility to fix Bootstrap text colors on light bg
+.text-white-on-dark {
+  color: white !important;
+}

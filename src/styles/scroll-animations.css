@@ -1,0 +1,57 @@
+/* Base State */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+/* Visible State */
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered Delays */
+.delay-100 {
+    transition-delay: 0.1s;
+}
+
+.delay-200 {
+    transition-delay: 0.2s;
+}
+
+.delay-300 {
+    transition-delay: 0.3s;
+}
+
+.delay-400 {
+    transition-delay: 0.4s;
+}
+
+.delay-500 {
+    transition-delay: 0.5s;
+}
+
+/* Reference Site Card Style (Minimalist) */
+.reference-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    /* Subtle border like reference */
+    border-radius: 0px !important;
+    /* Sharp corners like reference */
+    padding: 2.5rem;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: none;
+    /* Flat design */
+}
+
+/* Hover Effect: Scale & Shadow (User Request) */
+.reference-card:hover {
+    border-color: var(--color-maroon);
+    background: #ffffff;
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}

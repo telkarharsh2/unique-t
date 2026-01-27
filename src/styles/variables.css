@@ -1,0 +1,36 @@
+:root {
+    /* Primary Colors */
+    --color-maroon: #8B0000;
+    /* Deep Maroon ("Unique") */
+    --color-gold: #FFB800;
+    /* Golden Yellow (Crown) */
+
+    /* Supporting Colors */
+    --color-rich-black: #000000;
+    /* Rich Black ("t") */
+    --color-charcoal: #4D4D4D;
+    /* Dark Charcoal (Left Frame) */
+    --color-gray: #333333;
+    /* Classic Gray ("Fabric India") */
+    --color-accent-red: #C41E3A;
+    /* Accent Red (Right Corner) */
+
+    /* Backgrounds */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9f9f9;
+    --bg-glass: rgba(255, 255, 255, 0.85);
+
+    /* Typography */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
+
+    /* Shadows */
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.15);
+    --shadow-gold: 0 4px 15px rgba(255, 184, 0, 0.3);
+
+    /* Transitions */
+    --transition-fast: 0.3s ease;
+    --transition-smooth: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
