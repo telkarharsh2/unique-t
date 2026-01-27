@@ -1,8 +1,6 @@
 import React from 'react';
 
 import video1 from '../../assets/videos/first.mp4';
-import video2 from '../../assets/videos/second.mp4';
-import video3 from '../../assets/videos/third.mp4';
 
 const Hero = () => {
   return (
@@ -34,39 +32,8 @@ const Hero = () => {
                 style={{ background: 'linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6))' }}></div>
             </div>
           </div>
-
-          {/* Slide 2 - Video 2 */}
-          <div className="carousel-item h-100">
-            <div className="w-100 h-100 position-relative">
-              <video
-                src={video2}
-                autoPlay
-                muted
-                loop
-                className="d-block w-100 h-100 object-fit-cover"
-              />
-              <div className="position-absolute top-0 start-0 w-100 h-100"
-                style={{ background: 'linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6))' }}></div>
-            </div>
-          </div>
-
-          {/* Slide 3 - Video 3 */}
-          <div className="carousel-item h-100">
-            <div className="w-100 h-100 position-relative">
-              <video
-                src={video3}
-                autoPlay
-                muted
-                loop
-                className="d-block w-100 h-100 object-fit-cover"
-              />
-              <div className="position-absolute top-0 start-0 w-100 h-100"
-                style={{ background: 'linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6))' }}></div>
-            </div>
-          </div>
-
         </div>
-
+        
       </div>
 
       {/* Content Overlay */}
