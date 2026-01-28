@@ -1,5 +1,5 @@
 import React from 'react';
-import aboutVideo from '../../assets/videos/first.mp4';
+import aboutVideo from '../../assets/logo/logo-animation.mp4';
 
 const AboutUs = () => {
   return (
